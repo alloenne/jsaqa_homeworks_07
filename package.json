@@ -4,10 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:mainpage": "npx cypress run --record --group main --spec \"cypress/e2e/mainPage.cy.js\" --ci-build-id 1",
-    "test:login": "npx cypress run --record --group login --spec \"cypress/e2e/login.cy.js\" --ci-build-id 1",
-    "test:booking": "npx cypress run --record --group booking --spec \"cypress/e2e/booking.cy.js\" --ci-build-id 1",
-    "test:parallel": "run-p -c test:mainpage test:login test:booking"
+    "test:mainpage:chrome": "npx cypress run --record --group main --spec \"cypress/e2e/mainpage/**/*\" --browser chrome",
+    "test:login:chrome": "npx cypress run --record --group login --spec \"cypress/e2e/login/**/*\" --browser chrome",
+    "test:booking:chrome": "npx cypress run --record --group booking --spec \"cypress/e2e/booking/**/*\" --browser chrome",
+    "test:parallel:chrome": "run-p -c test:mainpage:chrome test:login:chrome test:booking:chrome",
+
+    "test:mainpage:firefox": "npx cypress run --record --group main --spec \"cypress/e2e/mainpage/**/*\" --browser firefox",
+    "test:login:firefox": "npx cypress run --record --group login --spec \"cypress/e2e/login/**/*\" --browser firefox",
+    "test:booking:firefox": "npx cypress run --record --group booking --spec \"cypress/e2e/booking/**/*\" --browser firefox",
+    "test:parallel:firefox": "run-p -c test:mainpage:firefox test:login:firefox test:booking:firefox",
+
+    "test:mainpage:electron": "npx cypress run --record --group main --spec \"cypress/e2e/mainpage/**/*\" --browser electron",
+    "test:login:electron": "npx cypress run --record --group login --spec \"cypress/e2e/login/**/*\" --browser electron",
+    "test:booking:electron": "npx cypress run --record --group booking --spec \"cypress/e2e/booking/**/*\" --browser electron",
+    "test:parallel:electron": "run-p -c test:mainpage:electron test:login:electron test:booking:electron"
   },
   "keywords": [],
   "author": "",

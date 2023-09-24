@@ -2,6 +2,7 @@
   {  
     "login": "qamid@qamid.ru",
     "password": "qamid" ,
-    "wrongpassword": "wrongpassword"
+    "wrongpassword": "wrongpassword",
+    "wrongemail": "qamid1@qamid.ru"
   } 
 ]

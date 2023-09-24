@@ -1,5 +1,5 @@
-import tests from "../fixtures/loginData.json"
-import selectors from "../fixtures/selectors.json"
+import tests from "../../fixtures/loginData.json"
+import selectors from "../../fixtures/selectors.json"
 
 describe("Testing authorization", () => {
 
@@ -14,7 +14,7 @@ describe("Testing authorization", () => {
         });        
     });
 
-    it("Failed authorization", () => {
+    it("Failed authorization with wrong password", () => {
         tests.forEach((test) => {
             cy.login(test.login, test.wrongpassword);
             cy.contains("Ошибка авторизации!").should("be.visible");

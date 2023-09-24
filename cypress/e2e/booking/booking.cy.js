@@ -1,6 +1,6 @@
-import tests from "../fixtures/loginData.json"
-import selectors from "../fixtures/selectors.json"
-import seats from "../fixtures/seats.json"
+import tests from "../../fixtures/loginData.json"
+import selectors from "../../fixtures/selectors.json"
+import seats from "../../fixtures/seats.json"
 
 describe("Bookong tickets", () => {
     it("Booking ticket for available film", () => {
